@@ -1,23 +1,24 @@
-:root{
-    --primary-color: rgba(247, 23, 23, 0.726) ;
-    --overlay-color: rgba(235, 190, 197, 0.925);
-    --menu-speed: 0.75s;
+/* CORE STYLES*/
+:root {
+  --primary-color: rgba(248, 248, 248, 0.9);
+  --overlay-color: rgba(255, 62, 62, 0.85);
+  --menu-speed: 0.75s;
     
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
         
 }
 
-body{
+body {
     font-family:'Open Sans', sans-serif;
     line-height: 1.4;
     }
 
-.container{
+.container {
     max-width: 960px;
     margin: auto;
     overflow: hidden;
@@ -27,7 +28,7 @@ body{
 
 .showcase{
     background-color: var(--primary-color);
-    color: white;
+    color: rgb(3, 3, 77);
     height: 100vh;
     position: relative;
        
@@ -36,7 +37,7 @@ body{
 
 .showcase::before{
     content: '';
-    background: url() no-repeat center center/cover;
+    background: url(img/weather.png) no-repeat center center/cover;    
     position: absolute;
     top: 0;
     left: 0;
@@ -56,7 +57,7 @@ body{
 }
 
 .showcase h1{
-    font-size: 4rem;
+    font-size: 4.5rem;
 
 }
 
@@ -67,20 +68,21 @@ body{
 .btn{
     display: inline-block;
     border: none;
-    background-color: var(--primary-color);
+    background-color: var(--overlay-color);
     color: #fff;
     font-weight: bold;
     padding: 0.75rem 1.5rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     text-decoration: none;
     transition: opacity 0s ease-in;
 }
 
 .btn:hover{
-    opacity: 0.7;
+    opacity: 0.9;
     color: white;
 }
 
+/*MENU STYLES*/
 .menu-wrap{
     position: fixed;
     top: 0;
@@ -108,7 +110,7 @@ body{
     width: 60px;
     height: 60px;
     padding: 1rem;
-    background: var(--primary-color);
+    background: var(--overlay-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,23 +226,399 @@ body{
 
 
 h1, h2 h3{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
+.orientation, .meeting, .last-message {
+    padding: 50px;
+}
 
-/*-------------------- CARD ------------*/
-.planos{
+.orientation, .orientation-content{
+    display: flex;
+
+}
+.orientation-title{
+    margin-top: 14%;
+    margin-left: 12%;
+    color:#d92a2a;
+    font-size: 35px;
+}
+.orientation-img {
+    width: 50%;
+    margin: 5%;
+}
+
+.meeting{
+    width: 100%;
+    color: white;
+    background: #fa4a50dc;
+    background-image: radial-gradient(51deg, rgba(13, 2, 98, 0.904) 0%, rgba(255, 83, 86, 0.164)100%);    
+}
+
+.meeting-title{
     text-align: center;
-    margin-top: 50px;
+    margin: 0px;
+    font-size: 2.8rem;
+    font-weight: normal;
 }
+
+.meeting-container {
+    text-align: center;
+    margin: 40px 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    -moz-box-pack: justify;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    
+}
+
+.meeting-subtitle{
+    margin-top: 25px;
+    margin-left: 160px;
+    margin-right: 80%;
+    
+}
+
+.img-subtitle-one{
+    width: 35%;
+    margin-bottom: -10px;
+    margin-left: 30px;
+    align-items: center;
+
+        
+}
+
+.img-subtitle-two{
+    width: 25%;
+    margin-top: 10px;
+    margin-right: 90px;
+}
+
+.img-sub-one{
+    width: 7%;
+    margin-top: 150px;
+    margin-left: -60px;
+}
+
+.img-sub-two{
+    width: 7%;
+    margin-top: 150px;
+    margin-left: -140px;
+
+}
+.subtitle-center{
+    transform: rotate(45deg);
+    margin-left: 45px;
+    
+}
+
+
+.meeting-final{
+    display: flex;
+    justify-content: center;
+}
+
+.meeting-final h3 {
+    text-align: center;
+    color: rgb(233, 233, 233);
+    font-weight: normal;
+    font-size: 2rem;
+    margin-right: 10px;
+    margin-left: 120px;
+       
+}
+
+.img-meeting{
+    width: 25%;
+    margin: 0 0 auto;
+}
+
+.last-content{
+    width: 50%;
+    
+}
+
+.last-message{
+    text-align: left;
+    display: flex;
+    background-color:white;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.last-title{
+    font-size: 2.5rem;
+    padding-top: 10%;
+    margin: 0 17%;
+    
+}
+
+.last-button{
+    width: 30%;
+    margin: 5% 17%;
+    
+}
+
+.last-img{
+    width: 40%;
+    margin-left: 2%;
+}
+
+/*FOOTER*/
+.footer{
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+    background-color: #070846;
+
+}
+
+.inner-footer{
+    display: block;
+    margin: 0 auto;
+    width: 1100px;
+    height: 100%;
+}
+
+.inner-footer .logo-container{
+    width: 100%;
+    float: left;
+    display: block;
+    margin: 0 2%;
+
+}
+
+.inner-footer .logo-container img{
+    width: 60px;
+    height: auto;
+}
+
+.inner-footer .footer-third{
+    width: calc(20% - 15px);
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+    
+}
+.inner-footer .footer-third:last-child{
+    margin-right: 0;
+}
+
+.inner-footer .footer-third h1{
+    font-size: 22px;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.inner-footer .footer-third li{
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 20px;
+}
+.inner-footer .footer-third a{
+    color: #bfbfbf;
+    font-size: 16px;
+}
+
+.inner-footer .footer-third span{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+
+}
+
+.icon{
+    display:flex;
+    margin: 10px -30px 0;
+}
+
+
+
+@media(max-width: 600px){
+    .footer .inner-footer{
+        width: 90%;
+    }
+
+    .inner-footer .logo-container,
+    .inner-footer .footer-third{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* --------- MEDIAS QUERIES ------- */
+
+@media screen and (max-width:740px){
+    .menu-wrap{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    .menu-wrap .menu{
+        height: 100vw;
+        width: 100%;
+    }
+    .menu-wrap .menu > div > div > ul > li{
+        font-size: 1rem;
+    }
+
+    .showcase{
+        height: 70vh;
+    }
+
+    .showcase h1{
+        font-size: 3rem;
+    }
+    .showcase::before{
+        height: 50%;
+        margin-top: 30%;
+    }
+
+    .subtitulo{
+        font-size: 1rem;
+    }
+
+    .btn{
+        padding: 0.5rem 1.1rem;
+        font-size: 1.1rem;
+    }
+
+    .orientation-title{
+        margin-bottom: 10%;
+        margin-top: 6%;
+        margin-left: -1%;
+        font-size: 1.2rem;
+        width: 39%;
+    }
+
+    .orientation-img{
+        width: 60%;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+
+    .meeting-title{
+        font-size: 2rem;
+        margin-bottom: 80px;
+    }
+
+    .meeting-container{
+        margin: 12% auto;
+    }
+
+    .img-subtitle-one{
+        width: 30%;
+       margin-top: -65px;
+       margin-left: 175px;
+    }
+
+    .img-subtitle-two{
+        width: 21%;
+        margin-left: -199px;
+        margin-top: -60px;
+    }
+
+    .img-sub-one{
+        margin-left: -55px;
+        margin-top: 40px;
+    }
+
+    .img-sub-two{
+        margin-top: 45px;
+    }
+
+    .subtitle-center{
+        margin-right: -10px;
+        margin-top: -80px;
+    }
+
+    .meeting-subtitle{
+        justify-content: start;
+    }
+
+    .meeting-final{
+        display: flex;
+    }
+
+    .meeting-final h3{
+        font-size: 1.5rem;
+        text-align: left;
+        margin-top: -10%;
+        margin-left: 50px;
+        width: 10%;
+    }
+
+    a .img-meeting{
+        position: relative;
+        margin-left: 100px;
+        margin-top: 100px;
+        width: 25%;
+    }
+    .last-message{
+        padding: 35px 35px;
+    }
+
+    .last-content{
+        width: 40%;
+    }
+    .last-title{
+        font-size: 1.2rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .last-img{
+        width: 49%;
+    }
+    
+    .last-button{
+        width: 80px;
+        height: 20px;
+        margin-top: 10%;
+        margin-left: 1%;
+        font-size: 0.57rem;
+        padding-bottom: 10px;
+        font-weight: bold;
+        padding-top: 5px;
+    }
+}
+
+/*------------CADASTRO --------- */
+
+.form-cadastro{
+    margin: 8% 35%;
+}
+
+.navbar-brand{
+    color: #d92a2a;
+}
+
+/*-------------------- CARD PAMENTS HTML------------*/
+
 
 .column
 {
     width:25%;
     float:left;
     padding:0px 10px;
-    margin-top: 50px;
-    margin-bottom: 70px;
+    /*margin-top: 50px;
+    margin-bottom: 70px;*/
 }
 
 .row::after{
@@ -250,7 +628,7 @@ h1, h2 h3{
     
 }
 
-.row{
+/*.row{
     display: ruby-base-container;
 }
 
@@ -261,9 +639,9 @@ h1, h2 h3{
 .price{
     color:black;
     font-weight: bold;
-}
+}*/
 
-@media screen and(max-width:600px)
+@media screen and (max-width:740px)
 {
     .column
     {
@@ -313,85 +691,3 @@ a:hover, button:hover{
      
 }
 
-
-
-/*FOOTER*/
-.footer{
-    list-style: none;
-    text-decoration: none;
-    width: 100vw;
-    display: block;
-    overflow: hidden;
-    padding: 70px 0;
-    box-sizing: border-box;
-    background-color: black;
-
-}
-
-.inner-footer{
-    display: block;
-    margin: 0 auto;
-    width: 1100px;
-    height: 100%;
-}
-
-.inner-footer .logo-container{
-    width: 35%;
-    float: left;
-    display: block;
-
-}
-
-.inner-footer .logo-container img{
-    width: 60px;
-    height: auto;
-}
-
-.inner-footer .footer-third{
-    width: calc(21.66% - 20px);
-    margin-right: 10px;
-    float: left;
-    height: 100%;
-}
-.inner-footer .footer-third:last-child{
-    margin-right: 0;
-}
-
-.inner-footer .footer-third h1{
-    font-size: 22px;
-    color: white;
-    display: block;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.inner-footer .footer-third li{
-    display: inline-block;
-    padding: 0 5px;
-    font-size: 20px;
-}
-
-.inner-footer .footer-third span{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 200;
-    display: block;
-    width: 100%;
-    padding-top: 20px;
-
-}
-
-
-
-@media(max-width: 600px){
-    .footer .inner-footer{
-        width: 90%;
-    }
-
-    .inner-footer .logo-container,
-    .inner-footer .footer-third{
-        width: 100%;
-        margin-bottom: 30px;
-    }
-}
